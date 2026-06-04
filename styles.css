@@ -43,11 +43,30 @@ body {
   font-size: clamp(2.5rem, 4vw, 4rem);
 }
 
-.tagline {
-  margin: 1rem 0 0;
-  max-width: 720px;
-  font-size: 1.1rem;
-  color: #e8f0ea;
+  .doctor-intro {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .doctor-photo {
+    width: 96px;
+    min-width: 96px;
+    height: 96px;
+    border-radius: 999px;
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 0.35);
+    background: white;
+    flex-shrink: 0;
+  }
+
+  .doctor-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
 }
 
 .site-nav {
@@ -101,10 +120,34 @@ body {
   border-left: 6px solid var(--accent);
 }
 
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  .report-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    margin: 1.5rem 0;
+  }
+
+  .report-gallery figure {
+    margin: 0;
+    background: #faf8f4;
+    border: 1px solid rgba(47, 93, 79, 0.08);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .report-gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .report-gallery figcaption {
+    padding: 0.85rem 1rem;
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+
   padding: 0.95rem 1.5rem;
   background: var(--accent);
   color: white;
