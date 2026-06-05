@@ -28,6 +28,7 @@ body {
   background: linear-gradient(135deg, #486a5d 0%, #6d8b79 100%);
   color: white;
   padding: 3rem 0;
+  position: relative;
 }
 
 .header-inner {
@@ -88,6 +89,26 @@ body {
 .site-nav a:hover,
 .site-nav a:focus-visible {
   background: rgba(255, 255, 255, 0.22);
+}
+
+.resume-link {
+  display: inline-block;
+  margin-left: 1rem;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  border: 1px solid rgba(47, 93, 79, 0.16);
+  border-radius: 999px;
+  background: rgba(47, 93, 79, 0.07);
+  vertical-align: middle;
+}
+
+.resume-link:hover,
+.resume-link:focus-visible {
+  background: rgba(47, 93, 79, 0.12);
+  color: var(--primary);
 }
 
 .section {
@@ -193,5 +214,28 @@ body {
 
   .section {
     padding: 1.5rem;
+  }
+}
+
+/* Mini logo in the top-right of the header */
+.mini-logo {
+  position: absolute;
+  top: 37%;
+  right: 4rem;
+  transform: translateY(-50%);
+  height: calc(100% - 2rem);
+  width: auto;
+  max-height: 125px;
+  border-radius: 8px;
+  object-fit: contain;
+  border: 2px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.02);
+}
+
+@media (max-width: 720px) {
+  .mini-logo {
+    height: calc(100% - 1rem);
+    max-height: 48px;
+    right: 0.75rem;
   }
 }
