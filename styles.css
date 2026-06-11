@@ -27,7 +27,7 @@ body {
 .site-header {
   background: linear-gradient(135deg, #486a5d 0%, #6d8b79 100%);
   color: white;
-  padding: 3rem 0;
+  padding: 3rem 1.5rem;
   position: relative;
 }
 
@@ -37,6 +37,8 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .site-header h1 {
@@ -197,9 +199,20 @@ body {
   margin: 0.3rem 0;
 }
 
+@media (max-width: 900px) {
+  .site-header {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .site-nav a {
+    padding: 0.65rem 0.9rem;
+    font-size: 0.95rem;
+  }
+}
+
 @media (max-width: 720px) {
   .site-header {
-    padding: 2rem 1rem;
+    padding: 1.6rem 1rem;
     text-align: center;
   }
 
@@ -212,20 +225,32 @@ body {
     justify-content: center;
   }
 
+  .resume-link {
+    margin-left: 0;
+    margin-top: 0.75rem;
+  }
+
   .section {
     padding: 1.5rem;
+  }
+
+  .mini-logo {
+    max-width: 64px;
+    max-height: 48px;
+    right: 0.75rem;
+    top: 0.75rem;
   }
 }
 
 /* Mini logo in the top-right of the header */
 .mini-logo {
   position: absolute;
-  top: 37%;
-  right: 4rem;
-  transform: translateY(-50%);
-  height: calc(100% - 2rem);
+  top: 1rem;
+  right: 1rem;
   width: auto;
-  max-height: 125px;
+  height: auto;
+  max-width: 120px;
+  max-height: 88px;
   border-radius: 8px;
   object-fit: contain;
   border: 2px solid rgba(255,255,255,0.18);
@@ -234,8 +259,9 @@ body {
 
 @media (max-width: 720px) {
   .mini-logo {
-    height: calc(100% - 1rem);
-    max-height: 48px;
+    max-width: 80px;
+    max-height: 56px;
     right: 0.75rem;
+    top: 0.75rem;
   }
 }
